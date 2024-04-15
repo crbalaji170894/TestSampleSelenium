@@ -8,8 +8,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class FirstSeleniumTest {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\HP\\eclipse-workspace\\TestSampleSelenium\\drivers\\chromedriver.exe");
+		System.out.println(System.getProperty("user.dir"));
+		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
 
 		// webDriver is an Interface
 		// Each browser drivers are class files
@@ -18,16 +19,13 @@ public class FirstSeleniumTest {
 
 		driver.get("https://www.google.com/");
 
-		System.setProperty("webdriver.geko.driver",
-				"C:\\Users\\HP\\eclipse-workspace\\TestSampleSelenium\\drivers\\geckodriver.exe");
+		System.setProperty("webdriver.geko.driver", System.getProperty("user.dir") + "\\drivers\\geckodriver.exe");
 
 		WebDriver driver1 = new FirefoxDriver();
 
 		driver1.get("https://www.google.com/");
 
-		
-		System.setProperty("webdriver.ie.driver",
-				"C:\\Users\\HP\\eclipse-workspace\\TestSampleSelenium\\drivers\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\drivers\\IEDriverServer.exe");
 
 		WebDriver driver2 = new InternetExplorerDriver();
 

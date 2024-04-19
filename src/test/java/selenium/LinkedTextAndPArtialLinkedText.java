@@ -18,6 +18,7 @@ public class LinkedTextAndPArtialLinkedText {
 		
 		driver.findElement(By.partialLinkText("Gm")).click();
 
+	
 	}
 
 }
